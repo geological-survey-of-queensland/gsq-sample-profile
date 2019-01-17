@@ -1,0 +1,18 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gsqs: <http://linked.data.qld.gov.au/def/samples/> .
+
+
+gsqs:SiteShape
+    a sh:NodeShape ;
+    sh:targetClass gsqs:Site;
+    sh:property [
+        sh:path dct:title;
+        sh:datatype xsd:string ;
+        sh:name "site name" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        rdfs:comment "Must have one and only one owl:DataTypeProperty dct:title that is a string Literal"
+    ] .

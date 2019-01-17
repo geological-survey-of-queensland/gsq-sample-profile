@@ -1,0 +1,65 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix sam: <http://def.seegrid.csiro.au/ontology/sam-lite#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix gsqs: <http://linked.data.qld.gov.au/def/samples/> .
+
+
+# gsqs:SimpleLithologyShape
+#     a sh:NodeShape ;
+#     sh:property [
+#         # any SimpleLithologyShape Concept must have the property skos:inScheme once and only once
+#         sh:path skos:inScheme;
+#         sh:minCount 1 ;
+#         sh:maxCount 1 ;
+#         # that skos:inScheme property must have the value <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> (the Simple Lithology Concept Scheme URI)
+#         sh:hasValue <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology>
+#     ] .
+
+gsqs:SampleShape
+    a sh:NodeShape ;
+    sh:targetClass sosa:Sample;
+    sh:property [
+        sh:path sam:currentLocation ;
+        sh:datatype xsd:string ;
+        sh:name "current location" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        rdfs:comment "Must have one and only one property sam:currentLocation indicating a string Literal object instance"
+    ] ;
+    sh:property [
+        sh:path dct:accessRights;
+        sh:in (
+          "public"
+          "private"
+        ) ;
+        sh:maxCount 1 ;
+        rdfs:comment "Must have either 0 or 1 dct:accessRights properties which, if it exists, must indicate a string Literal object instance, one of 'public', 'private'"
+    ] ;
+    sh:property [
+        sh:path sosa:isSampleOf;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node gsqs:SiteShape;
+        rdfs:comment "Must have one and only one property sosa:isSampleOf indicating a valid gsqs:SiteShape object"
+    ] ;
+    # must have one and only one sam:currentLocation that is a string Literal
+    sh:property [
+        sh:path gsqs:hasLithology;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        rdfs:comment "Must have one and only property gsqs:hasLithology indicating a skos:Concept object instance that must be an IRI, i.e. not a Blank Node, and, in turn, has one and only one skos:inScheme properties indicating the skos:ConceptScheme instance <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology>" ;
+        sh:property [
+            sh:path skos:inScheme ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology>
+        ]
+    ] .

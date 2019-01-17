@@ -1,0 +1,22 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix sam: <http://def.seegrid.csiro.au/ontology/sam-lite#> .
+@prefix gsqs: <http://linked.data.qld.gov.au/def/samples/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/stuff/> .
+
+ex:Sample_X
+    a sosa:Sample ;
+    sam:currentLocation "Shelf 25" ;
+    dct:accessRights "public" ;
+    sosa:isSampleOf ex:Site_A ;
+    # no hasLithology property
+    gsqs:hasLithology <http://resource.geosciml.org/classifier/cgi/lithology/travertine>
+ .
+
+
+ex:Site_A a gsqs:Site ;
+    dct:title "Site A" .
+
+<http://resource.geosciml.org/classifier/cgi/lithology/travertine> a skos:Concept ;
+# skos:inScheme <http://resource.geosciml.org/classifierscheme/cgi/2016.01/simplelithology> .
