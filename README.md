@@ -3,6 +3,7 @@
 This repository is a *profile* of Sample data models. A Profile is "A named set of constraints on one or more identified base specifications, including the identification of any implementing subclasses of datatypes, semantic interpretations, vocabularies, options and parameters of those base specifications necessary to accomplish a particular function." [[1](#ref-1))]
 
 <img src="fig-comp-sample.pdf" style="width:800px;" />  
+
 **Figure 1**: Overview diagram of this profile  
 
 The Sample data models profiled are indicated fomrally in a Profiles Ontology [[2](#ref-2)]-defined [profile descripton](profile.ttl) resource within this repository and are:
