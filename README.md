@@ -2,7 +2,7 @@
 
 This repository is a *profile* of Sample data models. A Profile is "A named set of constraints on one or more identified base specifications, including the identification of any implementing subclasses of datatypes, semantic interpretations, vocabularies, options and parameters of those base specifications necessary to accomplish a particular function." [[1](#ref-1))]
 
-<img src="fig-comp-sample.pdf" style="width:800px;" />  
+<img src="sample.svg" style="width:800px;" />  
 
 **Figure 1**: Overview diagram of this profile  
 
@@ -35,7 +35,7 @@ CSIRO Land & Water, Environmental Informatics Group
 <nicholas.car@csiro.au>
 
 
-## References 
+## References
 
 <a href="ref-1"></a>[1] Atkinson, Coyle, Isaac & Car (2019) *Profile Guidance*. W3C Editor's Draft. <https://w3c.github.io/dxwg/profiles/>
 
