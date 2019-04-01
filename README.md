@@ -1,22 +1,19 @@
 # GSQ Sample Profile
 
-This repository is a *profile* of Sample data models. A Profile is "A named set of constraints on one or more identified base specifications, including the identification of any implementing subclasses of datatypes, semantic interpretations, vocabularies, options and parameters of those base specifications necessary to accomplish a particular function." [[1](#ref-1))]
+This is the Geological Survey of Queensland's *sample* model. The model, overviewed in Figure 1, derives its basic metadata from the requiremens for describing samples according to the [International GeoSample Number (IGSN)](http://igsn.org) system and takes as its `Sample` class starting point the [SOSA Vocabulary's](https://www.w3.org/TR/vocab-ssn/) notion of a `Sample`.
+
 
 <img src="model/sample.svg" style="width:800px;" />  
 
-**Figure 1**: Overview diagram of this profile  
-
-The Sample data models profiled are indicated fomrally in a Profiles Ontology [[2](#ref-2)]-defined [profile descripton](profile.ttl) resource within this repository and are:
-
-* GeoSciML [[3](#ref-3)], borehole model
-* SOSA component of the Semantic Sensor Networks Ontology [[4](#ref-4)]
+**Figure 1**: Thos model's `Sample` class showing basic properties  
 
 
+## Profile contents
+The contents of this profile - files within this repository - are:
 
-
-
-
-
+1. [model/](model/) - folder containing image and machine-redable versions of this profile's models
+2. [shapes/](shapes/) - folder containing SHACL shapes files used to validate data's conformance to this profile's model
+3. [profile.ttl](profile.ttl) - the formal description of this Profile according to the The Profiles Vocabulary
 
 
 ## License
