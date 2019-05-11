@@ -2,11 +2,21 @@
 
 This is the Geological Survey of Queensland's *sample* model. The model, overviewed in Figure 1, derives its basic metadata from the requirements for describing samples according to the [International GeoSample Number (IGSN)](http://igsn.org) system and takes as its `Sample` class starting point the [SOSA Vocabulary's](https://www.w3.org/TR/vocab-ssn/) notion of a `Sample`.
 
-
 <img src="model/sample.svg" style="width:800px;" />  
 
 **Figure 1**: This model's `Sample` class showing basic properties  
 
+# Survey > Sample > Geological Property Model
+
+The *Geological Property* is the basis of the understanding of the surface and subsurface of Queensland. The model, overviewed in Figure 2, derives its basic metadata from the [SOSA Vocabulary](https://www.w3.org/TR/vocab-ssn/).
+
+1. A survey is a one-time event on a feature of interest that results in samples being collected.
+2. Observations, using a procedure, are performed on the samples with results.
+3. The results inform the geological properties for the feature of interest.
+
+<img src="model/geological-property.svg" style="width:800px;" />  
+
+**Figure 2**: The survey > sample > geological property model  
 
 ## Profile contents
 The contents of this profile - files within this repository - are:
@@ -22,7 +32,11 @@ CLasses used in this profile:
 
 ## OWL classes
 1. [SOSA sampling](https://www.w3.org/TR/vocab-ssn/#SOSASampling)
+2. [SOSA sample](https://www.w3.org/TR/vocab-ssn/#SOSASample)
 2. [SOSA feature of interest](https://www.w3.org/TR/vocab-ssn/#SOSAFeatureOfInterest)
+3. [SOSA procedure](https://www.w3.org/TR/vocab-ssn/#SOSAProcedure)
+3. [SOSA observation](https://www.w3.org/TR/vocab-ssn/#SOSAObservation)
+3. [SOSA observable property](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty)
 3. [FOAF document](http://xmlns.com/foaf/spec/#term_Document) - used to capture the secondary metadata in JSON format
 4. [Geometry](https://www.w3.org/2003/01/geo/)
 5. [ProperInterval](https://www.w3.org/TR/owl-time/#time:ProperInterval)
