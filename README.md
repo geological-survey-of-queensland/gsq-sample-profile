@@ -6,17 +6,25 @@ This is the Geological Survey of Queensland's *sample* model. The model, overvie
 
 **Figure 1**: This model's `Sample` class showing basic properties  
 
-# Survey > Sample > Geological Property Model
+# Linking Sample to the Geological Property Model
 
 The *Geological Property* is the basis of the understanding of the surface and subsurface of Queensland. The model, overviewed in Figure 2, derives its basic metadata from the [SOSA Vocabulary](https://www.w3.org/TR/vocab-ssn/).
 
 1. A survey is a one-time event on a feature of interest that results in samples being collected.
-2. Observations, using a procedure, are performed on the samples with results.
+2. Observations, using a procedure, are performed on the samples to yield results.
 3. The results inform the geological properties for the feature of interest.
 
 <img src="model/geological-property.svg" style="width:800px;" />  
 
 **Figure 2**: The survey > sample > geological property model  
+
+# Geochemistry Product Model - high level
+
+The *Geochemistry Product* is a *set* of geological observations, e.g. a compilation of all of the geochemistry data for a specific sub-block. The purpose of the *Geochemistry Product* is to create a distribution of data at level of compilation that is useful to consumers of that data. The compilation may be coarse-grain, e.g. whole of State, or fine-grained, e.g. within permit boundary.
+
+<img src="model/geochemistry-product.svg" style="width:800px;" />  
+
+**Figure 3**: The geochemistry product model
 
 ## Profile contents
 The contents of this profile - files within this repository - are:
