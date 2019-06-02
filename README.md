@@ -22,7 +22,7 @@ The *Geological Property* is the basis of the understanding of the surface and s
 
 The *Geochemistry Product* is a *set* of geological observations, e.g. a compilation of all of the geochemistry data for a specific sub-block. The purpose of the *Geochemistry Product* is to create a distribution of data at level of compilation that is useful to consumers of that data. The compilation may be coarse-grain, e.g. whole of State, or fine-grained, e.g. within permit boundary.
 
-<img src="model/geochemistry-product.svg" style="width:300px;" />  
+<img src="model/geochemistry-product.svg" style="width:250px;" />  
 
 **Figure 3**: The geochemistry product model
 
