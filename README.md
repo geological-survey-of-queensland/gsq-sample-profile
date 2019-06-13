@@ -60,10 +60,12 @@ The vocabularies used in this profile are:
 The content of this repository is licensed for use with the [Creative Commons 4.0 License](https://creativecommons.org/licenses/by/4.0/). See the [license deed](LICENSE) for details.
 
 
-## Contacts
+## Contacts 
 *owner*:  
-**Geological Survey of Queensland**  
-1 William St, Brisbane, Queensland, Australia  
+**Mark Gordon**  
+*Director - Geoscience Information*  
+Geological Survey of Queensland  
+<mark.gordon@dnrme.qld.gov.au>  
 
 *author*:  
 **Nicholas Car**  
