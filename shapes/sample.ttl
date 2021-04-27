@@ -8,7 +8,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix sam: <http://def.seegrid.csiro.au/ontology/sam-lite#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix gsqs: <http://linked.data.qld.gov.au/def/samples/> .
+@prefix gsqs: <https://linked.data.gov.au/def/gsq-samples/> .
 
 
 # gsqs:SimpleLithologyShape
