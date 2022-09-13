@@ -76,11 +76,6 @@ Department of Resources,
 Brisbane, QLD, Australia,  
 <vance.kelly@resources.qld.gov.au>
 
-**Nicholas Car**  
-*Senior Experimental Scientist*  
-CSIRO Land & Water, Environmental Informatics Group  
-<nicholas.car@csiro.au>
-
 
 ## References
 
